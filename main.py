@@ -82,4 +82,3 @@ async def login(cred: LogIn = Body(...), db: Session = Depends(get_db)):
     else:
         # Login failed (invalid credentials)
         return JSONResponse(content={"status": "error", "message": "Invalid username or password"})
-
